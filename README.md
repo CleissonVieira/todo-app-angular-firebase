@@ -6,8 +6,17 @@ Objetivo é aprender a utilizar o firebase com Angular.
 
 
 ## Ambiente [Angular 9](https://angular.io/) com [Firebase](https://firebase.google.com/?hl=pt)
+
+### Angular:
 - ```npm install -g @angular/cli```
 - ``````
+
+### Firebase:
+É configurado como um servidor de identidade, onde os usuários ficam armazenados no Firebase
+- Acessar e configurar um projeto: ```https://console.firebase.google.com/```
+- No terminal acessar sua conta: ```firebase login```
+- Instalar seguindo instruções e selecionar o projeto: ```ng add @angular/fire```
+- Instalar o firebase ```npm install --save firebase```
 
 ## Executar aplicação localmente
 - ```git clone https://github.com/CleissonVieira/todo-app-angular-firebase```

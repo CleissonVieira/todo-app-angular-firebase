@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import firebase from 'firebase/compat/app';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private afAuth: AngularFireAuth
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+  login() {
+    this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+    // .then((data => {
+    //    console.log(data) // aqui é possível pegar todos os dados de usuário
+    // }));
+    // this.afAuth.signInWithPopup(new firebase.auth.FacebookAuthProvider()); diversas possibilidades
   }
-
 }
