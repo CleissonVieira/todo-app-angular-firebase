@@ -17,6 +17,8 @@ import { NewComponent } from './pages/new/new.component';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { HttpClientModule } from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms';
 
 // import { provideAuth, getAuth } from '@angular/fire/auth'; // ng add @angular/fire
 // import { initializeApp, provideFirebaseApp } from '@angular/fire/app'; // ng add @angular/fire
@@ -39,6 +41,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     // provideFirebaseApp(() => initializeApp(environment.firebase)), // ng add @angular/fire

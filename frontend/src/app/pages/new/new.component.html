@@ -1,15 +1,15 @@
-<form>
+<form [formGroup]="form">
     <h1>Nova Tarefa</h1>
     <br>
-    <textarea name="" id="" cols="30" rows="2" placeholder="ex: Recarregar meu telefone"></textarea>
-    <small class="error"><strong>Tarefa inválida</strong></small>
+    <textarea name="" id="" cols="30" rows="2" placeholder="ex: Recarregar meu telefone" formControlName="title"></textarea>
+    <small class="error" *ngIf="form.get('title')?.invalid"><strong>Tarefa inválida</strong></small>
     <br>
     <h2>Quando?</h2>
-    <input type="date">
-    <small class="error"><strong>Data inválida</strong></small>
+    <input type="date" formControlName="date">
+    <small class="error" *ngIf="form.get('date')?.invalid"><strong>Data inválida</strong></small>
     <br><br>
     <p class="text-right">
-        <app-button>
+        <app-button (click)="submit()" [disabled]="form.invalid">
             <i class="fa fa-save"></i>
             Criar
         </app-button>

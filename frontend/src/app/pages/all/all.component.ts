@@ -1,3 +1,5 @@
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { DataService } from './../../data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./all.component.css']
 })
 export class AllComponent implements OnInit {
+  public todos: any[] = []
 
-  constructor() { }
+  constructor(
+    private service: DataService,
+    private afAuth: AngularFireAuth
+  ) { }
 
   ngOnInit(): void {
+    this.afAuth.idToken.subscribe(token => {
+      this.service.getAllTodos(token)
+        .subscribe((data: any) => this.todos = data)
+    })
   }
-
 }

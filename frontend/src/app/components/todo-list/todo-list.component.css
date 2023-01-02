@@ -50,3 +50,8 @@
 .todos li a small {
     font-size: 0.6em;
 }
+
+.todos .done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
