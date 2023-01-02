@@ -9,7 +9,6 @@ Objetivo é aprender a utilizar o firebase com Angular.
 
 ### Angular:
 - ```npm install -g @angular/cli```
-- ``````
 
 ### Firebase:
 É configurado como um servidor de identidade, onde os usuários ficam armazenados no Firebase
