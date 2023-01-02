@@ -22,3 +22,5 @@ Objetivo é aprender a utilizar o firebase com Angular.
 - ```git clone https://github.com/CleissonVieira/todo-app-angular-firebase```
 - ```cd Todo```
 - ```ng serve -o```
+
+![image](https://user-images.githubusercontent.com/29258164/210262342-1f7d6923-ca1b-4c1c-a114-b4bd639df7e2.png)
